@@ -19,10 +19,10 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    op.add_column('posts_test', sa.Column('owner_ID', sa.Integer(), sa.ForeignKey('users_test.ID', ondelete = 'CASCADE'), nullable = False))
+    op.add_column('posts', sa.Column('owner_ID', sa.Integer(), sa.ForeignKey('users.ID', ondelete = 'CASCADE'), nullable = False))
     pass
 
 
 def downgrade() -> None:
-    op.drop_column('posts_test', 'owner_ID')
+    op.drop_column('posts', 'owner_ID')
     pass
