@@ -20,15 +20,15 @@ Base = declarative_base()
 # Remark: For the actual state of art, this code is useless, since we are using ORM sqlAlchemy instead of write SQL Query inside our Python Code,
 #         We stopped updating requests that don't use ORM sqlAlchemy (even if they are still available).
 
-while True:
-    try:
-        conn = psycopg.connect(host = 'localhost', dbname = 'fastapi', user = 'postgres', password = 'admin', row_factory = dict_row)
-        cur = conn.cursor()
-        print("DataBase connection was succesfull!")
-        break
-    except Exception as error:
-        print(f"Connecting to DataBase failsed\nError is: {error}")
-        time.sleep(2)
+# while True:
+#     try:
+#         conn = psycopg.connect(host = 'localhost', dbname = 'fastapi', user = 'postgres', password = 'admin', row_factory = dict_row)
+#         cur = conn.cursor()
+#         print("DataBase connection was succesfull!")
+#         break
+#     except Exception as error:
+#         print(f"Connecting to DataBase failsed\nError is: {error}")
+#         time.sleep(2)
 
 ##################################### DB CONNECTION ##################################### 
 
