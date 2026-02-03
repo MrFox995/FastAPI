@@ -27,7 +27,7 @@ app.add_middleware(
 ### CORS ###
 
 ##################################### ROUTERS ##################################### 
-app.include_router(old.router)
+# app.include_router(old.router)
 app.include_router(users.router)
 app.include_router(posts.router)
 app.include_router(votes.router)
