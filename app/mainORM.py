@@ -33,3 +33,9 @@ app.include_router(posts.router)
 app.include_router(votes.router)
 app.include_router(auth.router)
 ##################################### ROUTERS ##################################### 
+
+####################################### TEST ######################################
+@app.get("/")
+def root():
+    return {"message": "Testing my API is up. Updates work, without restarting containers"}
+####################################### TEST ######################################

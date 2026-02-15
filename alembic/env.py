@@ -8,6 +8,7 @@ from alembic import context
 ### OUR CODE ###
 from app.models import Base # Base in inside database.py, but we import from models since we want retrieve postgres table structure as well
 from app.config import settings
+from app import models
 ### OUR CODE ###
 
 # this is the Alembic Config object, which provides
